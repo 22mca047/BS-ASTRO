@@ -1,0 +1,68 @@
+input {
+    width: 20%;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px 20px;
+    width: 570px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+td,th {
+    padding: 8px;
+    text-align: left;
+}
+tr:ntd-child(even) {
+  background-color: #c4c6cd;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+    background-color: #c4c6cd;
+}
+.btn-group {
+    padding: 30px 0;
+
+}
+
+.btn-group button {
+    background-color: white; /* Green background */
+    border: 1px solid black; /* Green border */
+    color: black; /* White text */
+    padding: 20px 70px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: rgb(135, 135, 135);
+  }
+
+  .btnresult.active {
+    background-color: rgb(135, 135, 135);
+    color: rgb(19, 20, 29);
+  }
+
+  .btnresult {
+    color: rgb(19, 20, 29);
+    background-color: #ffffff;
+  }
+  .filter-button.active {
+    background-color: gray;
+    color: white;
+}

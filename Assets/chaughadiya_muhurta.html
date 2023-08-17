@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaughadiya Muhurta</title>
+    <link rel="icon" type="image/x-icon" href="./images/icon/title_icon.png">
+    <link src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" />
+
+    <!--FontOwsome cdn-->
+    <script src="https://kit.fontawesome.com/5b95af3014.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=places"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1TQbhu0P2qLVw1b9ed6PuV-2tX5GOFLo&libraries=places"></script> -->
+
+    <!--Custom Style shit-->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="Stylesheet" href="./css/style.css">
+    <link rel="Stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="Stylesheet" href="./css/breadcrumb.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./images/mainlogo.png" width="130px" height="100%" margin="0px 0px 0px 0px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="free_kundli.html">Free Kundli</a></li>
+                        <li><a href="today_panchang.html">Today Panchang</a></li>
+                        <li><a href="horoscope.html">Horoscope</a> </li>
+                        <li><a href="kundli_matching.html">Kundali Matching</a></li>
+                        <li><a href="chaughadiya_muhurta.html">Chaughadiya Muhurta</a></li>
+                    </ul>
+                </nav>
+                <button class="button" onclick="window.location.href = 'login_index.html';">Logout</button>
+            </div>
+        </div>
+    </div>
+    <div class="first" style="height: 275px;background: radial-gradient(#f8dddd,#5a9dc5);">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2" style=" padding-left: 90px;">
+                    <div class="title" style="color: black;">
+                        <h1><b> Chaughadiya Muhurta </b> </h1>
+                    </div>
+                    <h2 style="text-align: center; color: #35355f;">Shubh Muhurta</h2>
+
+                </div>
+                <div class="col-2">
+                    <img src="./images/icon/poster_mahurat.png" width="30%" height="90%"
+                        style="margin-left: 55%;padding-top: 8%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section style="padding-top: inherit; background-color: #cacaca;">
+        <div class="row">
+            <nav>
+                <ol class="cd-breadcrumb triangle">
+                    <li><a href="./index.html"><i class="fa fa-home" style="color: black;"></i> Home</a></li>
+                    <li class="current"><em>Chaughadiya Muhurta</em></li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    
+    <!-- panchang page -->
+    <div class="panchang">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-container" style="height: 210px;">
+                        <div class="form-title">
+                            <h3> Chaughadiya Muhurta </h3>
+                        </div>
+                        <form method="post" id="myForm">
+                            
+                            <div class="form-group">
+                                <label for="location">City :</label>
+                                <input type="text" id="location" class="form-control" name="location"
+                                    placeholder="ex. Ahmedabad, Gujarat, India" onkeyup="lat_lon()">
+                            </div>
+
+                            <div class="form-group">
+                                <!-- <label for="lat">Latitude:</label> -->
+                                <input type="hidden" id="lat" class="form-control" name="lat" value="" maxlength="5"
+                                    placeholder="- - - - - -">
+                            </div>
+
+                            <div class="form-group">
+                                <!-- <label for="lon">Longitude:</label> -->
+                                <input type="hidden" id="lon" class="form-control" name="lon" value="" maxlength="5"
+                                    placeholder="- - - - - -">
+                            </div>
+
+                            <!-- <label for="tzone">Time Zone:</label> -->
+                            <input type="hidden" id="tzone" name="tzone" required>
+
+                            <input type="submit" class="btn" value="Get Muhurta">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <img src="./images/panchang.png" class="panchang-img" style="height: 220px; width: 220px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Show Result -->
+    <div id="table_body"></div>
+
+    <!-- Footer Side-->
+    <div class="footer">
+        <a href="https://brainsquaretech.com/" style="color: white;">Copyright &#169; 2023 - BrainSquareTech Pvt.
+            Ltd.</a>
+    </div>
+
+    <!-- CRUD File -->
+    <script src="./crud/c_chaughadiya_muhurta.js"></script>
+
+    <!-- My Validation -->
+    <script src="./js/validation.js"></script>
+
+    <!-- Location -->
+    <script src="./js/location.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+    <script src="js/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AdminLTE App -->
+    <script src="js/dist/adminlte.min.js"></script>
+
+    <!-- jquery-validation -->
+    <script src="js/jquery-validation/jquery.validate.min.js"></script>
+    <script src="js/jquery-validation/additional-methods.min.js"></script>
+
+</body>
+
+</html>

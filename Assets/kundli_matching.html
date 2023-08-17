@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kundli Matching</title>
+    <link rel="icon" type="image/x-icon" href="./images/icon/title_icon.png">
+    <link src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" />
+
+    <!--FontOwsome cdn-->
+    <script src="https://kit.fontawesome.com/5b95af3014.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=places"></script>
+
+    <!--Custom Style shit-->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+        <link rel="Stylesheet" href="./css/style.css">
+        <link rel="Stylesheet" href="./css/form.css">
+        <link rel="Stylesheet" href="./css/table.css">
+        <link rel="stylesheet" href="./css/register.css" />
+        <link rel="Stylesheet" href="./css/breadcrumb.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./images/mainlogo.png" width="130px" height="100%" margin="0px 0px 0px 0px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="free_kundli.html">Free Kundli</a></li>
+                        <li><a href="today_panchang.html">Today Panchang</a></li>
+                        <li><a href="horoscope.html">Horoscope</a> </li>
+                        <li><a href="kundli_matching.html">Kundali Matching</a></li>
+                        <li><a href="chaughadiya_muhurta.html">Chaughadiya Muhurta</a></li>
+                    </ul>
+                </nav>
+                <button class="button" onclick="window.location.href = 'login_index.html';">Logout</button>
+            </div>
+        </div>
+    </div>
+    <div class="first" style="height: 275px;background: radial-gradient(#f8dddd,#5a9dc5);">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2" style=" padding-left: 90px;">
+                    <div class="title" style="color: black;">
+                        <h1><b>Kundli Matching</b> </h1>
+                    </div>
+                      <h2 style="text-align: center; color: #35355f;">Find your right one, through Matchmaking</h2>
+                    
+                </div>
+                <div class="col-2">
+                    <img src="./images/icon/poster_match_kundali.png" width="30%" height="90%"  style="margin-left: 55%;padding-top: 8%;"   >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section style="padding-top: inherit; background-color: #cacaca;">
+        <div class="row">
+            <nav>
+                <ol class="cd-breadcrumb triangle">
+                    <li><a href="./index.html"><i class="fa fa-home" style="color: black;"></i> Home</a></li>
+                    <li class="current"><em>Kundali Matching</em></li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Kundli Matching form -->
+    <div class="panchang">
+        <div class="small-container">
+            <!-- <div class="form-wrapper"> -->
+                    <form id="myForm"  method="post" style="width: 100%; background-color: lightgrey;">
+                        <div class="row" style="width: 100%; background-color: lightgrey;">
+                        
+                        <!-- Male -->
+                        <div class="col-2" style="height:auto;width:550px;align-content: left;margin-left: -105px;">
+                            <div class="form-container" style="width: 500px;">
+                            
+                            <div class="form-title">
+                               <label> Male Details</label>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" class="form-control" name="name" placeholder="Enter Name">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <select name="gender" id="gender" class="form-control select2bs4">
+                                        <option value="" Selected> Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Date of Birth & Time</label>
+                                    <input type="datetime-local" id="dob_time" class="form-control" name="dob_time" placeholder="Enter your Birthday">
+                                </div>
+                            </div>
+                           
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="location">Birth Place</label>
+                                    <input type="text" id="location" class="form-control" name="location"
+                                        placeholder="ex. Ahmedabad, Gujarat, India" onkeyup="lat_lon()">
+                                </div>
+                            </div>
+                            
+                            <!-- <label for="lat">Latitude:</label> -->
+                            <input type="hidden" id="lat" class="form-control" name="lat" value="" maxlength="5" readonly>
+
+                            <!-- <label for="lon">Longitude:</label> -->
+                            <input type="hidden" id="lon" class="form-control" name="lon" value="" maxlength="5" readonly>
+
+                            <!-- <label for="tzone">Time Zone:</label> -->
+                            <input type="hidden" id="tzone" class="form-control" name="tzone" required>
+                            </div>
+                        </div>
+
+                    <!-- Female -->
+
+                    <div class="col-2" style="height:auto; width:550px; align-content: right; display: inline-block;">
+                        <div class="form-container" style="width: 500px; margin-left: -10%;">
+                        
+                        <div class="form-title">
+                           <label> Female Details</label>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="fname" class="form-control" name="fname" placeholder="Enter Name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select name="fgender" id="fgender" class="form-control select2bs4">
+                                    <option value="" Selected> Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Date of Birth & Time</label>
+                                <input type="datetime-local" id="fdob_time" class="form-control" name="fdob_time" placeholder="Enter your Birthday">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="location">Birth Place</label>
+                                <input type="text" id="flocation" class="form-control" name="flocation"
+                                    placeholder="ex. Ahmedabad, Gujarat, India" onkeyup="f_lat_lon()">
+                            </div>
+                        </div>
+                        
+                        <!-- <label for="lat">Latitude:</label> -->
+                        <input type="hidden" id="flat" name="flat" value="" maxlength="5" readonly>
+
+                        <!-- <label for="lon">Longitude:</label> -->
+                        <input type="hidden" id="flon" name="flon" value="" maxlength="5" readonly>
+
+                        <!-- <label for="tzone">Time Zone:</label> -->
+                        <input type="hidden" id="ftzone" name="ftzone" required>
+                        </div>
+                    </div>      
+                </div>      
+                <input type="submit" class="form-btn" value="Match Kundli"> </div>
+            </form>
+    </div>
+
+    <!-- Result Show -->
+    <div id="table_body"></div>
+    <div id="table_body2"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="https://brainsquaretech.com/" style="color: white;">Copyright &#169;  2023 - BrainSquareTech Pvt. Ltd.</a>
+    </div>
+    
+    <!-- CRUD File -->
+    <script src="./crud/c_kundli_matching.js"></script>
+    
+    <!-- Location -->
+    <script src="./js/location.js"></script>
+
+    <!-- My Validation -->
+    <script src="./js/validation.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+    <script src="js/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- AdminLTE App -->
+    <script src="js/dist/adminlte.min.js"></script>
+
+    <!-- jquery-validation -->
+    <script src="js/jquery-validation/jquery.validate.min.js"></script>
+    <script src="js/jquery-validation/additional-methods.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+</body>
+</html>

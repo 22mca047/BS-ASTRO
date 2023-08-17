@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS Astro</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/icon/title_icon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+    <!--FontOwsome cdn-->
+    <script src="https://kit.fontawesome.com/5b95af3014.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=places"></script>
+
+    <!--Custom Style shit-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="Stylesheet" href="./css/style.css">
+    <!-- <link rel="Stylesheet" href="./css/form.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .form-group {
+    flex-basis: calc(33.33% - 10px);
+    font-size: 11px;
+    color: red;
+  }
+.span{
+    font-size: 10px;
+  }
+    </style>
+</head>
+
+ <!-- Home -->
+        <section class="home">
+            <div class="form_container">
+              <i class="uil uil-times form_close"></i>
+              
+              <!-- Login From -->
+              <div class="form login_form">
+                <form method="post" id="login_data">
+                  <h2>Login</h2>
+      
+                  <div class="form-group">
+                  <div class="input_box">
+                    <input type="email" placeholder="Enter your email" class="form-control" id="lemail" name="email" required />
+                    <i class="uil uil-envelope-alt email"></i>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input_box">
+                    <input type="password" class="form-control" name="pass" id="lpass" placeholder="Enter your password" required />
+                    <i class="uil uil-lock password"></i>
+                    <i class="uil uil-eye-slash pw_hide"></i>
+                  </div>
+                </div>
+      
+                   <div class="option_field">
+                     <span class="checkbox">
+                       <input type="checkbox" id="check" />
+                       <label for="check">Remember me</label>
+                     </span>
+                     <a href="#" id="forgot">Forgot password?</a>
+                  </div>
+      
+                  <input class="button" type="submit" value="Login">
+      
+                  <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+                </form>
+              </div>
+      
+              <!-- Signup From -->
+              <div class="form signup_form">
+                <form id="signup_data" method="post" >
+                  <h2>Signup</h2>
+
+                <div class="form-group">
+                  <div class="input_box">
+                    <i class="fa-light fas fa-user"></i>
+                    <input type="name" id="name" name="name" class="form-control" placeholder="Enter your name" required />
+                  </div>
+                 </div>
+
+                <div class="form-group">
+                  <div class="input_box">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required />
+                    <i class="uil-envelope-alt email"></i>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input_box">
+                    <i class="fa-light fas fa-cake-candles"></i>
+                    <input type="date" id="dob" name="dob" class="form-control" required />
+                  </div>
+                </div>
+                  
+                  <div class="form-group">
+                  <div class="input_box">
+                    <input type="password" id="pass" name="pass" class="form-control" placeholder="Create password"minlength="6" maxlength="12" required />
+                    <i class="uil-lock password"></i>
+                  </div>
+                 </div>
+
+                 <div class="form-group">
+                  <div class="input_box">
+                    <input type="password" id="cpass" name="cpass" class="form-control" placeholder="Confirm password" onkeyup="validate_password()" required />
+                    <i class="uil-lock password"></i>
+                  </div>
+                  <span id="wrong_pass_alert"></span>
+                 </div>
+
+                 <div class="form-group">
+                  <div class="input_box">
+                    <i class="fas fa-phone"></i>
+                    <input type="name" id="mno" name="mno" class="form-control" placeholder="Enter Mobile Number" minlength="10" maxlength="10"  required />
+                    
+                  </div>
+                 </div>
+
+                 <input class="button" type="submit" value="Register">
+      
+                  <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+                </form>
+              </div>
+
+              <!-- Forgot From -->
+              <div class="form forgot_form">
+                <form  id="forgot_data" method="get" >
+                  <h2>Forgot Password</h2>
+
+                  <div class="input_box">
+                    <input type="email" placeholder="Enter your email" required />
+                    <i class="uil-envelope-alt email"></i>
+                  </div>
+                  
+                  <input type="submit" class="button" value="Get Email">
+      
+                  <div class="login_signup"><a href="#" id="back-to-login">Back</a></div>
+                </form>
+              </div>
+
+            </div>
+          </section>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./images/mainlogo.png" width="130px" height="100%" margin="0px 0px 0px 0px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="login_index.html">Home</a></li>
+                        <li><a href="#" onclick="showAlert()">Free Kundli</a></li>
+                        <li><a href="#" onclick="showAlert()">Today Panchang</a></li>
+                        <li><a href="#" onclick="showAlert()">Horoscope</a> </li>
+                        <li><a href="#" onclick="showAlert()">Kundali Matching</a></li>
+                        <li><a href="#" onclick="showAlert()">Chaughadiya Muhurta</a></li>
+                    </ul>
+                </nav>
+                <button class="button" id="form-open" >Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature News -->
+    <div class="first" style="height: 275px;background: radial-gradient(#f8dddd,#5a9dc5);">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2" style=" padding-left: 90px;">
+                    <div class="title" style="color: black;">
+                        <h1><b> Astrology </b> </h1>
+                    </div>
+                    <div class="col-2">
+                        <h3 style="text-align: center; color: #35355f;">
+                            "Astrology is a science in itself and contains an illuminating body of knowledge.
+                            It taught me many things and I am greatly indebted to it."&nbsp; <br>
+                            <h4 style="text-align:end;"> - Albert Einstein</h4>
+                        </h3>
+                    </div>
+                    
+                </div>
+                <div class="col-2">
+                    <img src="./images/icon/poster_place.png" width="30%" height="90%"  style="margin-left: 55%;padding-top: 8%;"   >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews -->
+    <div class="review">
+        <div class="small-container">
+            <h2 class="title"> ASTROLOGY SERVICES </h2>
+            <div class="row">
+                <a class="col-4" href="#" onclick="showAlert()">
+                    <img src="./images/icon/Kundali.png">
+                    <h3>Kundli Details</h3>
+                    <p>A Kundli, also known as a birth chart or horoscope, is an astrological 
+                        chart or diagram that represents the positions of celestial bodies at
+                         the time of an individual's birth.A Janam Kundli is your stored karmas' of
+                         the previous birth.</p>
+
+                </a>
+                
+                <a class="col-4" href="#" onclick="showAlert()">
+                    <img src="./images/icon/panchang.png">
+                    <h3>Today Panchang</h3>
+                    <p>Panchang, also known as Panchangam, is a Hindu calendar that provides comprehensive
+                        astrological and astronomical information for a specific day. It includes details such as
+                        tithi (lunar day), nakshatra (lunar mansion), yoga (auspicious period).</p>
+
+                </a>
+                
+                <a class="col-4" href="#" onclick="showAlert()">
+                    <img src="./images/icon/horoscope.png">
+                    <h3>Horoscope</h3>
+                    <p>Horoscopes can provide various aspects of a person's life, 
+                        including relationships, career, health. 
+                        They are typically presented as daily, weekly, monthly or yearly 
+                        based on movement and alignment of celestial bodies in
+                         relation to the zodiac signs.</p>
+
+                </a>
+
+                <a class="col-4" href="#" onclick="showAlert()">
+                    <img src="./images/icon/chaughadiya.png">
+                    <h3>Chaughadiya Muhurta</h3>
+                    <p>Chaughadiya Muhurta, also known as Choghadiya or Choghadiya Muhurat,
+                         is a traditional system in Hindu astrology used to determine auspicious and
+                          inauspicious time periods during a day for various activities.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+      
+    <div style=" background-color: rgb(191, 186, 186); border: 25px; border-top-color: black;">
+        <h2 class="title" style="padding-bottom: 0%;">ASTROLOGY</h2>
+        <p style="padding: 0px 10px 5px 10px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: larger;">
+            Astrology is a method of predicting mundane events based upon the assumption that the celestial
+            bodies—particularly the planets and the stars considered in their arbitrary combinations or configurations 
+            (called constellations) in some way either determine or indicate changes in the sublunar world.</p>
+    </div>
+
+    <!-- Footer Side-->
+    <div class="footer">
+        <a href="https://brainsquaretech.com/" style="color: white;">Copyright &#169;  2023 - BrainSquareTech Pvt. Ltd.</a>
+    </div>
+
+    <script src="./js/register.js"></script>
+    <script src="./crud/c_register.js"></script>
+    <script src="./crud/c_login.js"></script>
+
+    <!-- My Validation -->
+    <script src="./js/validation.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery/jquery.min.js"></script>
+    
+    <!-- Bootstrap 4 -->
+    <script src="js/bootstrap/bootstrap.bundle.js"></script>
+    
+    <!-- AdminLTE App -->
+    <script src="js/dist/adminlte.min.js"></script>
+    
+    <!-- jquery-validation -->
+    <script src="js/jquery-validation/jquery.validate.min.js"></script>
+    <script src="js/jquery-validation/additional-methods.min.js"></script>
+    </script>
+</body>
+</html>

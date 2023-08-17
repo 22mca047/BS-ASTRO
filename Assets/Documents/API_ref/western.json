@@ -1,0 +1,3170 @@
+{
+	"info": {
+		"_postman_id": "fab313ad-aa1a-4081-9e42-9581d2f3cd71",
+		"name": "Western Astrology API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22644900"
+	},
+	"item": [
+		{
+			"name": "western_horoscope",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/western_horoscope",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"western_horoscope"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "planet prediction",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/personalized_planet_prediction/daily/mars",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"personalized_planet_prediction",
+						"daily",
+						"mars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "western_chart_data",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/western_horoscope",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"western_horoscope"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "western chart IMAGE",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/natal_wheel_chart",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"natal_wheel_chart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tropical_transits/daily",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "prediction_timezone",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/tropical_transits/daily",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"tropical_transits",
+						"daily"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tropical_transits/weekly",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "prediction_timezone",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/tropical_transits/weekly",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"tropical_transits",
+						"weekly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tropical_transits/monthly",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "prediction_timezone",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/tropical_transits/monthly",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"tropical_transits",
+						"monthly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "solar_return_details",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/solar_return_details",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"solar_return_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "solar_return_planets",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/solar_return_planets",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"solar_return_planets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "solar_return_house_cusps",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/solar_return_house_cusps",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"solar_return_house_cusps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "solar_return_planet_aspects",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/solar_return_planet_aspects",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"solar_return_planet_aspects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lunar_metrics",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/lunar_metrics",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"lunar_metrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "composite horoscope",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "orb",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/synastry_horoscope",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"synastry_horoscope"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "synastry_horoscope",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "orb",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/synastry_horoscope",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"synastry_horoscope"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tropical_transits_timing/monthly",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "orb",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/synastry_horoscope",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"synastry_horoscope"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tropical_transits_timing/daily",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "orb",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/synastry_horoscope",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"synastry_horoscope"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "general_ascendant_report/tropical",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "orb",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/synastry_horoscope",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"synastry_horoscope"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "general_sign_report/tropical/sun",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "orb",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/synastry_horoscope",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"synastry_horoscope"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "general_house_report",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "orb",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/synastry_horoscope",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"synastry_horoscope"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "personality_report/tropical",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/personality_report/tropical",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"personality_report",
+						"tropical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "romantic_personality_report",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/romantic_personality_report/tropical",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"romantic_personality_report",
+						"tropical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "personalized_planet_prediction/daily/moon",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "36.08",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "-96.92",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "-6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/personalized_planet_prediction/daily/moon",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"personalized_planet_prediction",
+						"daily",
+						"moon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "life_forecast_report/tropical",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/life_forecast_report/tropical",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"life_forecast_report",
+						"tropical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "romantic_forecast_report/tropical",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/romantic_forecast_report/tropical",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"romantic_forecast_report",
+						"tropical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friendship_report/tropical",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/friendship_report/tropical",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"friendship_report",
+						"tropical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "karma_destiny_report/tropical",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/karma_destiny_report/tropical",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"karma_destiny_report",
+						"tropical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "love_compatibility_report/tropical",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/love_compatibility_report/tropical",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"love_compatibility_report",
+						"tropical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "romantic_forecast_couple_report/tropical",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/romantic_forecast_couple_report/tropical",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"romantic_forecast_couple_report",
+						"tropical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "zodiac_compatibility/:zodiacName/:partnerZodiacName",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/zodiac_compatibility/virgo/pisces",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"zodiac_compatibility",
+						"virgo",
+						"pisces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "compatibility/:sunSign/:risingSign/:partnerSunSign/:partnerRisingSign",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_id",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "p_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "p_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "p_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "p_hour",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "p_min",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "p_lat",
+							"value": "19.20",
+							"type": "text"
+						},
+						{
+							"key": "p_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "p_tzone",
+							"value": "5.5",
+							"type": "text"
+						},
+						{
+							"key": "s_day",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "s_month",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "s_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "s_hour",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "s_min",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "s_lat",
+							"value": "19.33",
+							"type": "text"
+						},
+						{
+							"key": "s_lon",
+							"value": "25.20",
+							"type": "text"
+						},
+						{
+							"key": "s_tzone",
+							"value": "5.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/compatibility/leo/aries/cancer/virgo",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"compatibility",
+						"leo",
+						"aries",
+						"cancer",
+						"virgo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tarot",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "day",
+							"value": "10",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "month",
+							"value": "5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "year",
+							"value": "1990",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "hour",
+							"value": "19",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "min",
+							"value": "55",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "lat",
+							"value": "19.2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "lon",
+							"value": "25.2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "tzone",
+							"value": "5.5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "love",
+							"value": "57",
+							"type": "text"
+						},
+						{
+							"key": "career",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "finance",
+							"value": "54",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://json.astrologyapi.com/v1/tarot_predictions",
+					"protocol": "https",
+					"host": [
+						"json",
+						"astrologyapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"tarot_predictions"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "api_key",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "user_id",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

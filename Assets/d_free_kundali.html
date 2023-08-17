@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Kundli Details</title>
+    <link rel="icon" type="image/x-icon" href="./images/icon/title_icon.png">
+    <link src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" />
+
+    <script src="https://kit.fontawesome.com/5b95af3014.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=places"></script>
+
+    <!--Custom Style shit-->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="Stylesheet" href="./css/style.css">
+    <link rel="Stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/register.css"/>
+    <link rel="Stylesheet" href="./css/breadcrumb.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .data {
+            display: none;
+        }
+
+        .data.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./images/mainlogo.png" width="130px" height="100%" margin="0px 0px 0px 0px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="free_kundli.html">Free Kundli</a></li>
+                        <li><a href="today_panchang.html">Today Panchang</a></li>
+                        <li><a href="horoscope.html">Horoscope</a> </li>
+                        <li><a href="kundli_matching.html">Kundali Matching</a></li>
+                        <li><a href="chaughadiya_muhurta.html">Chaughadiya Muhurta</a></li>
+                    </ul>
+                </nav>
+                <button class="button" onclick="window.location.href = 'login_index.html';">Logout</button>
+            </div>
+        </div>
+    </div>
+    <div class="first" style="height: 275px;background: radial-gradient(#f8dddd,#5a9dc5);">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2" style=" padding-left: 90px;">
+                    <div class="title" style="color: black;">
+                        <h1><b> Free Kundli </b> </h1>
+                    </div>
+                    <h2 style="text-align: center; color: #35355f;">Get instant & Accurate, Janam Kundli</h2>
+
+                </div>
+                <div class="col-2">
+                    <img src="./images/icon/poster_kundali.png" width="30%" height="90%"
+                        style="margin-left: 55%;padding-top: 8%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section style="padding-top: inherit;" >
+        <div class="row" style="background-color: #cacaca;">
+            <nav>
+                <ol class="cd-breadcrumb triangle">
+                    <li><a href="./index.html"><i class="fa fa-home" style="color: black;"></i> Home</a></li>
+                    <li><a href="./free_kundli.html">Fill Kundli</a></li>
+                    <li class="current"><em>Free Kundli Details</em></li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <div class="review" style="background:radial-gradient(#cfcfcf,#A9A9A9);">
+        <div class="small-container">
+            <div class="row" style="flex-wrap:wrap;">
+                <div class="btn-group">
+                    <div id="filterContainer">
+                        <button class="filter-button active" data-target="data1"
+                            style="border-radius: 25px 0px 0px 25px;">Basic</button>
+                        <button class="filter-button" data-target="data2">Kundali</button>
+                        <button class="filter-button" data-target="data3">KP</button>
+                        <button class="filter-button" data-target="data4">Astakvarga</button>
+                        <button class="filter-button" data-target="data5">Charts</button>
+                        <button class="filter-button" data-target="data6"
+                            style="border-radius: 0px 25px 25px 0px;">Dasha</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dataContainer">
+
+        <!-- Basic -->
+        <div class="data active" id="data1">
+            <div id="api1"></div>
+        </div>
+
+        <!-- Kundli -->
+        <div class="data" id="data2">
+            <div id="api2"></div>
+        </div>
+
+        <!-- KP -->
+        <div class="data" id="data3">
+            <div id="api3a"></div>
+            <div id="api3b"></div>
+        </div>
+
+        <!-- Ashtakvarga -->
+        <div class="data" id="data4">
+            <div id="api4"></div>
+        </div>
+
+        <!-- Charts -->
+        <div class="data" id="data5">
+            <div class="review" style="background:radial-gradient(#cfcfcf,#A9A9A9);" padding-left:40px">
+                <div class="small-container">
+                  
+                  <div class="row" style="flex-wrap:none;">      
+                        <div class="col-3" >
+                          <div class="title" style = "margin:0 10px;">
+                              <h4><b> Moon </b> </h4>
+                          </div>
+                          <div id="api5a" style="padding-top: 5%;"></div>
+                        </div>
+                     
+                        <div class="col-3" >
+                          <div class="title" style = "margin:0 10px;">
+                              <h4><b> Chalit </b> </h4>
+                          </div>
+                          <div id="api5b" style="padding-top: 5%;"></div>
+                        </div>
+                        <div class="col-3" >
+                            <div class="title" style = "margin:0 10px;">
+                                <h4><b> Sun </b> </h4>
+                            </div>
+                            <div id="api5c" style="padding-top: 5%;"></div>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+
+        <!-- Dasha -->
+        <div class="data" id="data6">
+            <div id="api6"></div>
+        </div>
+
+    </div> <!-- data container over -->
+
+    <div class="footer">
+        <a href="https://brainsquaretech.com/" style="color: white;">Copyright &#169; 2023 -
+            BrainSquareTech Pvt. Ltd.</a>
+    </div>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var filterButtons = document.querySelectorAll(".filter-button");
+
+            filterButtons.forEach(function (button) {
+                button.addEventListener("click", handleFilter);
+            });
+        });
+
+        function handleFilter(event) {
+            var target = event.target.getAttribute("data-target");
+
+            // Remove active class from all buttons
+            var filterButtons = document.querySelectorAll(".filter-button");
+            filterButtons.forEach(function (button) {
+                button.classList.remove("active");
+            });
+
+            // Add active class to the clicked button
+            event.target.classList.add("active");
+
+            // Hide all data elements
+            var dataElements = document.querySelectorAll(".data");
+            dataElements.forEach(function (data) {
+                data.classList.remove("active");
+            });
+
+            // Show the data element corresponding to the clicked button
+            var targetData = document.getElementById(target);
+            targetData.classList.add("active");
+        }
+    </script>
+
+    <script>
+
+        // api1 data
+        const mdata = JSON.parse(localStorage.getItem("mdata"));
+        const apidata1 = JSON.parse(localStorage.getItem("api1"));
+
+        const api1 = document.getElementById("api1");
+        api1.innerHTML = `<div class="review" style="background:radial-gradient(#cfcfcf,#A9A9A9);">
+                <div class="small-container">
+                    <div class="row">
+                        <div class="col-2" style="flex-wrap: wrap;">
+                            <div class="title" style = "margin:0 10px;">
+                                <h4><b> Basic Details </b> </h4>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>${mdata.name}</td>
+                                </tr>
+                                <tr>
+                                  <th>Gender</th>
+                                  <td>${mdata.gender}</td>
+                                </tr>
+                                <tr>
+                                  <th>Day</th>
+                                 <td>${mdata.day}</td>
+                                </tr>
+                                <tr>
+                                  <th>Month</th>
+                                 <td>${mdata.month}</td>
+                                </tr>
+                                <tr>
+                                  <th>Year</th>
+                                  <td>${mdata.year}</td>
+                                </tr>
+                                <tr>
+                                  <th>Birth Place</th>
+                                  <td>${mdata.location}</td>
+                                </tr>
+                                <tr>
+                                  <th>Hour</th>
+                                  <td>${mdata.hour}</td>
+                                </tr>
+                                <tr>
+                                  <th>Minute</th>
+                                  <td>${mdata.min}</td>
+                                </tr>
+                                <tr>
+                                  <th>Second</th>
+                                  <td>${mdata.sec}</td>
+                                </tr>
+                                <tr>
+                                  <th>Latitude</th>
+                                  <td>${mdata.lat}</td>
+                                </tr>
+                                <tr>
+                                  <th>Longitude</th>
+                                  <td>${mdata.lon}</td>
+                                </tr>
+                                <tr>
+                                  <th>Time Zone</th>
+                                  <td>GMT ${mdata.tzone}</td>
+                                </tr>
+                                <tr>
+                                  <th>Tithi</th>
+                                  <td>${apidata1.Tithi}</td>
+                                </tr>
+                                <tr>
+                                  <th>Naksahtra</th>
+                                  <td>${apidata1.Naksahtra}</td>
+                                </tr>
+                            </table>
+                        </div>
+              
+                        <div class="col-2">
+                            <div class="title" style="margin:0 10px;">
+                                <h4><b> Avakhada Details </b> </h4>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>Ascendant</th>
+                                    <td>${apidata1.ascendant}</td>
+                                </tr>
+                                <tr>
+                                  <th>Ascendant Lord</th>
+                                  <td>${apidata1.ascendant_lord}</td>
+                                </tr>
+                                <tr>
+                                  <th>Varna</th>
+                                  <td>${apidata1.Varna}</td>
+                                </tr>
+                                <tr>
+                                  <th>Vashya</th>
+                                  <td>${apidata1.Vashya}</td>
+                                </tr>
+                                <tr>
+                                  <th>Yoni</th>
+                                  <td>${apidata1.Yoni}</td>
+                                </tr>
+                                <tr>
+                                  <th>Gan</th>
+                                  <td>${apidata1.Gan}</td>
+                                </tr>
+                                <tr>
+                                  <th>Nadi</th>
+                                  <td>${apidata1.Nadi}</td>
+                                </tr>
+                                <tr>
+                                  <th>SignLord</th>
+                                  <td>${apidata1.SignLord}</td>
+                                </tr>
+                                <tr>
+                                  <th>Sign</th>
+                                  <td>${apidata1.sign}</td>
+                                </tr>
+                                <tr>
+                                  <th>NaksahtraLord</th>
+                                  <td>${apidata1.NaksahtraLord}</td>
+                                </tr>
+                                <tr>
+                                  <th>Charan</th>
+                                  <td>${apidata1.Charan}</td>
+                                </tr>
+                                <tr>
+                                  <th>Yog</th>
+                                  <td>${apidata1.Yog}</td>
+                                </tr>
+                                <tr>
+                                  <th>Karan</th>
+                                  <td>${apidata1.Karan}</td>
+                                </tr>
+                                <tr>
+                                  <th>Yunja</th>
+                                  <td>${apidata1.yunja}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div> `;
+
+
+        // api2 data
+        const apidata2 = JSON.parse(localStorage.getItem("api2"));
+        const api2 = document.getElementById("api2");
+
+        let api2_table = ""
+        apidata2.map((data) => {
+            api2_table +=
+                `<tr>
+                <td>${data.name}</td>
+                <td>${data.sign}</td>
+                <td>${data.signLord}</td>
+                <td>${data.nakshatra}</td>
+                <td>${data.nakshatraLord}</td>
+                <td>${data.fullDegree.toFixed(2)}</td>
+                <td>${data.isRetro}</td>
+                <td>${data.planet_awastha}</td>
+                <td>${data.house}</td>
+            </tr> `
+        });
+
+
+        api2.innerHTML = `<div class="review" style="background:radial-gradient(#cfcfcf,#A9A9A9);">
+                <div class="small-container">
+                    <div class="title" style="margin:0 10px;">
+                        <h4><b> Kundli Planet Details </b> </h4>
+                    </div>
+                    <div class="row">
+                        <table id="planetaryData"  style="width: -webkit-fill-available;">               
+                            <tr>
+                                <th>Name</th>
+                                <th>Sign</th>
+                                <th>Sign Lord</th>
+                                <th>Nakshatra</th>
+                                <th>Nakshata Lord</th>
+                                <th>Degree</th>
+                                <th>Is Ratro?</th>
+                                <th>Avastha</th>
+                                <th>House</th>
+                            </tr>
+                                ${api2_table}
+                        </table>              
+                    </div>
+                </div>
+            </div> `;
+
+
+        // api3a data
+        const apidata3a = JSON.parse(localStorage.getItem("api3a"));
+        const api3a = document.getElementById("api3a");
+        console.log(apidata3a)
+
+        let api3a_table = ""
+        apidata3a.map((data) => {
+            api3a_table +=
+                `<tr>
+                <td>${data.planet_name}</td>
+                <td>${data.degree}</td>
+                <td>${data.house}</td>
+                <td>${data.sign}</td>
+                <td>${data.sign_lord}</td>
+                <td>${data.nakshatra}</td>
+                <td>${data.nakshatra_lord}</td>
+                <td>${data.charan}</td>
+                <td>${data.sub_lord}</td>
+                
+            </tr> `
+        });
+
+
+        api3a.innerHTML = `<div class="review" style="background:radial-gradient(#cfcfcf,#A9A9A9);">
+                <div class="small-container">
+                    <div class="title" style="margin:0 10px;">
+                        <h4><b> KP Planets </b> </h4>
+                    </div>
+                    <div class="row">
+                        <table id="planetaryData"  style="width: -webkit-fill-available;">               
+                            <tr>
+                                <th>Planet Name</th>
+                                <th>Degree</th>
+                                <th>House</th>
+                                <th>Sign</th>
+                                <th>Sign Lord</th>
+                                <th>Nakshatra</th>
+                                <th>Nakshatra Lord</th>
+                                <th>Charan</th>
+                                <th>Sub Lord</th>
+                                
+                            </tr>
+                                ${api3a_table}
+                        </table>              
+                    </div>
+                </div>
+            </div> `;
+
+
+
+
+        // api3b data
+        const apidata3b = JSON.parse(localStorage.getItem("api3b"));
+        const api3b = document.getElementById("api3b");
+
+        let api3b_table = ""
+        apidata3b.map((data) => {
+            api3b_table +=
+                `<tr>
+                <td>${data.cusp_full_degree}</td>
+                <td>${data.formatted_degree}</td>
+                <td>${data.sign}</td>
+                <td>${data.sign_lord}</td>
+                <td>${data.nakshatra}</td>
+                <td>${data.nakshatra_lord}</td>
+                <td>${data.sub_lord}</td>
+                
+            </tr> `
+        });
+
+
+        api3b.innerHTML = `<div class="review" style="background:radial-gradient(#cfcfcf,#A9A9A9);">
+                <div class="small-container">
+                    <div class="title" style="margin:0 10px;">
+                        <h4><b> KP House Cusps </b> </h4>
+                    </div>
+                    <div class="row">
+                        <table id="planetaryData"  style="width: -webkit-fill-available;">               
+                            <tr>
+                                <th>Cusp Full Degree</th>
+                                <th>Formatted Degree</th>
+                                <th>Sign</th>
+                                <th>Sign Lord</th>
+                                <th>Nakshata</th>
+                                <th>Nakshatra Lord</th>
+                                <th>Sub Lord</th>
+                            </tr>
+                                ${api3b_table}
+                        </table>              
+                    </div>
+                </div>
+            </div> `;
+
+        // api4 data
+        const apidata4 = JSON.parse(localStorage.getItem("api4"));
+
+        const api4 = document.getElementById("api4");
+        api4.innerHTML = `<div class="review" style="background:radial-gradient(#cfcfcf,#A9A9A9);">
+                    <div class="small-container"style="padding: 2px 0px;">
+                        <div class="title"style="margin:0 15px; ">
+                            <h4><b> Ashtak Points Details </b> </h4>
+                        </div>
+                            <table  style="width: -webkit-fill-available;">
+                                    <tr>
+                                        <th>Data</th>
+                                        <th>Sun</th>
+                                        <th>Moon</th>
+                                        <th>Mars</th>
+                                        <th>Mercury</th>
+                                        <th>Jupiter</th>
+                                        <th>Venus</th>
+                                        <th>Saturn</th>
+                                        <th>Ascendant</th>
+                                        <th>Total</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Aries</th>
+                                        <td>${apidata4.ashtak_points.aries.sun}</td>
+                                        <td>${apidata4.ashtak_points.aries.moon}</td>
+                                        <td>${apidata4.ashtak_points.aries.mars}</td>
+                                        <td>${apidata4.ashtak_points.aries.mercury}</td>
+                                        <td>${apidata4.ashtak_points.aries.jupiter}</td>
+                                        <td>${apidata4.ashtak_points.aries.venus}</td>
+                                        <td>${apidata4.ashtak_points.aries.saturn}</td>
+                                        <td>${apidata4.ashtak_points.aries.ascendant}</td>
+                                        <th>${apidata4.ashtak_points.aries.total}</th>
+                                    </tr> 
+                                    <tr>
+                                        <th>taurus</th>
+                                        <td>${apidata4.ashtak_points.taurus.sun}</td>
+                                        <td>${apidata4.ashtak_points.taurus.moon}</td>
+                                        <td>${apidata4.ashtak_points.taurus.mars}</td>
+                                        <td>${apidata4.ashtak_points.taurus.mercury}</td>
+                                        <td>${apidata4.ashtak_points.taurus.jupiter}</td>
+                                        <td>${apidata4.ashtak_points.taurus.venus}</td>
+                                        <td>${apidata4.ashtak_points.taurus.saturn}</td>
+                                        <td>${apidata4.ashtak_points.taurus.ascendant}</td>
+                                        <th>${apidata4.ashtak_points.taurus.total}</th>
+                                    </tr> 
+                                    <tr>
+                                        <th>Gemini</th>
+                                        <td>${apidata4.ashtak_points.gemini.sun}</td>
+                                        <td>${apidata4.ashtak_points.gemini.moon}</td>
+                                        <td>${apidata4.ashtak_points.gemini.mars}</td>
+                                        <td>${apidata4.ashtak_points.gemini.mercury}</td>
+                                        <td>${apidata4.ashtak_points.gemini.jupiter}</td>
+                                        <td>${apidata4.ashtak_points.gemini.venus}</td>
+                                        <td>${apidata4.ashtak_points.gemini.saturn}</td>
+                                        <td>${apidata4.ashtak_points.gemini.ascendant}</td>
+                                        <th>${apidata4.ashtak_points.gemini.total}</th>
+                                    </tr> 
+                                     <tr>
+                                        <th>Cancer</th>
+                                        <td>${apidata4.ashtak_points.cancer.sun}</td>
+                                        <td>${apidata4.ashtak_points.cancer.moon}</td>
+                                        <td>${apidata4.ashtak_points.cancer.mars}</td>
+                                        <td>${apidata4.ashtak_points.cancer.mercury}</td>
+                                        <td>${apidata4.ashtak_points.cancer.jupiter}</td>
+                                        <td>${apidata4.ashtak_points.cancer.venus}</td>
+                                        <td>${apidata4.ashtak_points.cancer.saturn}</td>
+                                        <td>${apidata4.ashtak_points.cancer.ascendant}</td>
+                                        <th>${apidata4.ashtak_points.cancer.total}</th>
+                                    </tr> 
+                                    <tr>
+                                       <th>Leo</th>
+                                       <td>${apidata4.ashtak_points.leo.sun}</td>
+                                       <td>${apidata4.ashtak_points.leo.moon}</td>
+                                       <td>${apidata4.ashtak_points.leo.mars}</td>
+                                       <td>${apidata4.ashtak_points.leo.mercury}</td>
+                                       <td>${apidata4.ashtak_points.leo.jupiter}</td>
+                                       <td>${apidata4.ashtak_points.leo.venus}</td>
+                                       <td>${apidata4.ashtak_points.leo.saturn}</td>
+                                       <td>${apidata4.ashtak_points.leo.ascendant}</td>
+                                       <th>${apidata4.ashtak_points.leo.total}</th>
+                                   </tr> 
+                                   <tr>
+                                      <th>Virgo</th>
+                                      <td>${apidata4.ashtak_points.virgo.sun}</td>
+                                      <td>${apidata4.ashtak_points.virgo.moon}</td>
+                                      <td>${apidata4.ashtak_points.virgo.mars}</td>
+                                      <td>${apidata4.ashtak_points.virgo.mercury}</td>
+                                      <td>${apidata4.ashtak_points.virgo.jupiter}</td>
+                                      <td>${apidata4.ashtak_points.virgo.venus}</td>
+                                      <td>${apidata4.ashtak_points.virgo.saturn}</td>
+                                      <td>${apidata4.ashtak_points.virgo.ascendant}</td>
+                                      <th>${apidata4.ashtak_points.virgo.total}</th>
+                                  </tr> 
+                                  <tr>
+                                     <th>Libra</th>
+                                     <td>${apidata4.ashtak_points.libra.sun}</td>
+                                     <td>${apidata4.ashtak_points.libra.moon}</td>
+                                     <td>${apidata4.ashtak_points.libra.mars}</td>
+                                     <td>${apidata4.ashtak_points.libra.mercury}</td>
+                                     <td>${apidata4.ashtak_points.libra.jupiter}</td>
+                                     <td>${apidata4.ashtak_points.libra.venus}</td>
+                                     <td>${apidata4.ashtak_points.libra.saturn}</td>
+                                     <td>${apidata4.ashtak_points.libra.ascendant}</td>
+                                     <th>${apidata4.ashtak_points.libra.total}</th>
+                                 </tr> 
+                                 <tr>
+                                    <th>Scorpio</th>
+                                    <td>${apidata4.ashtak_points.scorpio.sun}</td>
+                                    <td>${apidata4.ashtak_points.scorpio.moon}</td>
+                                    <td>${apidata4.ashtak_points.scorpio.mars}</td>
+                                    <td>${apidata4.ashtak_points.scorpio.mercury}</td>
+                                    <td>${apidata4.ashtak_points.scorpio.jupiter}</td>
+                                    <td>${apidata4.ashtak_points.scorpio.venus}</td>
+                                    <td>${apidata4.ashtak_points.scorpio.saturn}</td>
+                                    <td>${apidata4.ashtak_points.scorpio.ascendant}</td>
+                                    <th>${apidata4.ashtak_points.scorpio.total}</th>
+                                </tr> 
+                                <tr>
+                                   <th>Sagittarius</th>
+                                   <td>${apidata4.ashtak_points.sagittarius.sun}</td>
+                                   <td>${apidata4.ashtak_points.sagittarius.moon}</td>
+                                   <td>${apidata4.ashtak_points.sagittarius.mars}</td>
+                                   <td>${apidata4.ashtak_points.sagittarius.mercury}</td>
+                                   <td>${apidata4.ashtak_points.sagittarius.jupiter}</td>
+                                   <td>${apidata4.ashtak_points.sagittarius.venus}</td>
+                                   <td>${apidata4.ashtak_points.sagittarius.saturn}</td>
+                                   <td>${apidata4.ashtak_points.sagittarius.ascendant}</td>
+                                   <th>${apidata4.ashtak_points.sagittarius.total}</th>
+                               </tr> 
+                               <tr>
+                                  <th>Capricorn</th>
+                                  <td>${apidata4.ashtak_points.capricorn.sun}</td>
+                                  <td>${apidata4.ashtak_points.capricorn.moon}</td>
+                                  <td>${apidata4.ashtak_points.capricorn.mars}</td>
+                                  <td>${apidata4.ashtak_points.capricorn.mercury}</td>
+                                  <td>${apidata4.ashtak_points.capricorn.jupiter}</td>
+                                  <td>${apidata4.ashtak_points.capricorn.venus}</td>
+                                  <td>${apidata4.ashtak_points.capricorn.saturn}</td>
+                                  <td>${apidata4.ashtak_points.capricorn.ascendant}</td>
+                                  <th>${apidata4.ashtak_points.capricorn.total}</th>
+                              </tr>  
+                              <tr>
+                                 <th>Aquarius</th>
+                                 <td>${apidata4.ashtak_points.aquarius.sun}</td>
+                                 <td>${apidata4.ashtak_points.aquarius.moon}</td>
+                                 <td>${apidata4.ashtak_points.aquarius.mars}</td>
+                                 <td>${apidata4.ashtak_points.aquarius.mercury}</td>
+                                 <td>${apidata4.ashtak_points.aquarius.jupiter}</td>
+                                 <td>${apidata4.ashtak_points.aquarius.venus}</td>
+                                 <td>${apidata4.ashtak_points.aquarius.saturn}</td>
+                                 <td>${apidata4.ashtak_points.aquarius.ascendant}</td>
+                                 <th>${apidata4.ashtak_points.aquarius.total}</th>
+                             </tr>  
+                             <tr>
+                                <th>Pisces</th>
+                                <td>${apidata4.ashtak_points.pisces.sun}</td>
+                                <td>${apidata4.ashtak_points.pisces.moon}</td>
+                                <td>${apidata4.ashtak_points.pisces.mars}</td>
+                                <td>${apidata4.ashtak_points.pisces.mercury}</td>
+                                <td>${apidata4.ashtak_points.pisces.jupiter}</td>
+                                <td>${apidata4.ashtak_points.pisces.venus}</td>
+                                <td>${apidata4.ashtak_points.pisces.saturn}</td>
+                                <td>${apidata4.ashtak_points.pisces.ascendant}</td>
+                                <th>${apidata4.ashtak_points.pisces.total}</th>
+                            </tr> 
+                        </table>
+                    </div>
+                 </div> `;
+
+        function convertSvgToJpg(svgData, backgroundColor, divId) {
+            debugger
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+
+            const img = new Image();
+            img.onload = function () {
+                debugger
+                canvas.width = img.width;
+                canvas.height = img.height;
+
+                // Set background color
+                ctx.fillStyle = backgroundColor;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                ctx.drawImage(img, 0, 0);
+
+                // Convert canvas to data URL
+                const dataUrl = canvas.toDataURL("image/jpeg");
+
+                // Create an <img> element for the converted image
+                const convertedImg = document.createElement("img");
+                convertedImg.src = dataUrl;
+
+                // Append the converted image to the specified <div> element
+                const div = document.getElementById(divId);
+                div.appendChild(convertedImg);
+            };
+            img.src = "data:image/svg+xml;base64," + btoa(svgData);
+        }
+        // api5a data
+        const apidata5a = JSON.parse(localStorage.getItem("api5a"));
+        const api5a = document.getElementById("api5a");
+        const backgroundColor = "#ffffff"; // Background color
+        const divId = "api5a";
+        console.log(apidata5a)
+        convertSvgToJpg(apidata5a.svg, backgroundColor,divId)
+
+        // api5b data
+        const apidata5b = JSON.parse(localStorage.getItem("api5b"));
+        const api5b = document.getElementById("api5b");
+        const backgroundColorb = "#ffffff"; // Background color
+        const divIdb = "api5b";
+        console.log(apidata5b)
+
+        convertSvgToJpg(apidata5b.svg, backgroundColorb,divIdb)
+        
+        // api5b data
+        const apidata5c = JSON.parse(localStorage.getItem("api5c"));
+        const api5c = document.getElementById("api5c");
+        const backgroundColorc = "#ffffff"; // Background color
+        const divIdc = "api5c";
+        console.log(apidata5c)
+
+        convertSvgToJpg(apidata5c.svg, backgroundColorc,divIdc)
+        
+        // api6a data
+        const apidata6a = JSON.parse(localStorage.getItem("api6a"));
+        const api6a = document.getElementById("api6a");
+
+        // api6b data
+        const apidata6b = JSON.parse(localStorage.getItem("api6b"));
+        const api6b = document.getElementById("api6b");
+
+        let api6a_table = ""
+        apidata6a.map((data) => {
+            api6a_table +=
+                `<tr>
+                <td>${data.planet}</td>
+                <td>${data.start}</td>
+                <td>${data.end}</td>
+            </tr> `
+        });
+
+        let api6b_table = ""
+        apidata6b.map((data) => {
+            api6b_table +=
+                `<tr>
+                <td>${data.dasha_name}</td>
+                <td>${data.duration} Years</td>
+                <td>${data.start_date}</td>
+                <td>${data.end_date}</td>
+            </tr> `
+        });
+
+
+        api6.innerHTML = `<div class="review" style="background:radial-gradient(#cfcfcf,#A9A9A9);">
+                                <div class="small-container">
+                                    
+                                    <div class="row">
+                                        <div class="title" style="margin:0 10px;">
+                                            <h4><b> Vimshottari Details </b> </h4>
+                                        </div>
+                                        <table style="width: -webkit-fill-available;">               
+                                            <tr>
+                                                <th>Planet Name</th>
+                                                <th>Start Date</th>
+                                                <th>End Date</th>
+                                            </tr>
+                                            ${api6a_table}
+                                        </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="title" style="margin:0 10px;">
+                                            <h4><b> Yogini Dasha Details </b> </h4>
+                                        </div>
+                                        <table style="width: -webkit-fill-available;">               
+                                            <tr>
+                                                <th>Dasha Name</th>
+                                                <th>Duration</th>
+                                                <th>Start Date</th>
+                                                <th>End Date</th>
+                                            </tr>
+                                            ${api6b_table}
+                                        </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> `;
+
+    </script>
+
+    <!-- CRUD File -->
+    <script src="./crud/d_free_kundali.js"></script>
+
+    <!-- Location -->
+    <script src="./js/location.js"></script>
+
+    <!-- My Validation -->
+    <script src="./js/validation.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+    <script src="js/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- AdminLTE App -->
+    <script src="js/dist/adminlte.min.js"></script>
+
+    <!-- jquery-validation -->
+    <script src="js/jquery-validation/jquery.validate.min.js"></script>
+    <script src="js/jquery-validation/additional-methods.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
